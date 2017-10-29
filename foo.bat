@@ -26,13 +26,3 @@ powershell -Command "Invoke-WebRequest https://dist.nuget.org/win-x86-commandlin
 ".fake\NuGet.exe" "Install" "FAKE" "-Version" "4.50" "-OutputDirectory" ".fake\packages" "-ExcludeVersion"
 
 
-goto comment
-@echo off
-(
-echo cls
-echo cd %%~dp0
-echo ".fake\packages\FAKE\tools\Fake.exe" %%* --nocache
-) > fake.bat
-@echo on
-
-:comment
