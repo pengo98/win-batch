@@ -12,6 +12,11 @@ set foo=bar
 echo %foo%
 echo errorlevel=%errorlevel%
 
+goto comment
+whatever you type here will not be shown in stdout
+works on multiline comments
+:comment
+
 if exist "fake.bat" ( 
     del "fake.bat"
 )
